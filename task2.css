@@ -159,3 +159,21 @@ nav a{
         display:block;
     }
 }
+.page1 {
+    flex-direction: column; /* Xếp cột trái/phải thành hàng dọc */
+    height: auto;           /* Cho khung tự co giãn chiều cao */
+}
+.pageleft, .pageright {
+    width: 100%;            /* Mỗi bên chiếm hết chiều ngang */
+    padding: 20px;
+}
+.anhdaidien img {
+    margin-top: 20px;       /* Giảm margin trên mobile */
+    width: 200px;           /* Thu nhỏ avatar lại 200px cho vừa màn hình */
+    height: 200px;
+}
+  h1 {
+    margin-top: 20px;
+    font-size: 32px;        /* Thu nhỏ h1 để không vỡ chữ */
+  }
+}
