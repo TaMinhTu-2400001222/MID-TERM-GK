@@ -35,7 +35,7 @@ body {
     border-radius: 50%;
 }
 .anhdaidien img {
-    margin-top: 200px;
+    margin-top: 0;
     width: 450px;
     height: 450px;
     border-radius: 50%;
@@ -44,6 +44,7 @@ body {
 .anhdaidien img:hover {
     transform:scale(1.05);
 }
+/* giao diện trên máy tính*/
 .page1 {
     display:flex;
     height: 800px;
@@ -56,19 +57,24 @@ body {
 
 }
 .pageleft{
-    width:50%;
-    background-image: url(7mau.jpg);
-    padding:20px;
-    text-align:center;
-    color:red;
-    font-size:40px;
-    font-weight:bold;
+    background-image: url("7mau.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
 }
 .pageright{
-    background-image: url(hong.jpg);
+    background-image: url("hong.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 50%;
-    flex: 1;
-    padding-left:40px;
+    padding: 40px;
 
 }
  .row{
@@ -139,6 +145,7 @@ h2 {
     margin-left:auto;
     padding:10px 20px;
 }
+/* giao diện trên điện thọại*/
 /*có tác dụng xuất hiện ba gạch bao gồm cả 3 cái nút trên thanh chọn khi mở bằng điện thoại*/
 @media (max-width:768px){
 .menu-btn{
@@ -155,25 +162,45 @@ nav a{
     border-right:none;
     border-top:1px solid white;
 }
-    nav.show a{
-        display:block;
-    }
+nav.show a{
+    display:block;
 }
 .page1 {
-    flex-direction: column; /* xếp cột trái,phải thành hàng dọc */
-    height: auto;           /* cho khung tự co giãn chiều cao của điện thoại */
-}
-.pageleft, .pageright {
-    width: 100%;            /* mỗi bên chiếm hết chiều ngang */
+    flex-direction: column; /* Xếp cột trái/phải thành hàng dọc */
+    height: auto;           /* Cho khung tự co giãn chiều cao */
+    }
+.pageleft  {
+    width: 100%;            /* Mỗi bên chiếm hết chiều ngang */
+    padding: 20px;
+    }
+.pageright {
+    width: 100%;            /* Mỗi bên chiếm hết chiều ngang */
     padding: 20px;
 }
 .anhdaidien img {
-    margin-top: 20px;       /* giảm margin trên điện thoại */
-    width: 200px;           /* thu nhỏ avatar lại 200px cho vừa màn hình */
+    margin-top: 20px;       /* Giảm margin trên mobile */
+    width: 200px;           /* Thu nhỏ avatar lại 200px cho vừa màn hình */
     height: 200px;
 }
-  h1 {
+h1 {
     margin-top: 20px;
-    font-size: 32px;        /* thu nhỏ h1 để không vỡ chữ */
+    font-size: 32px;        /* Thu nhỏ h1 để không vỡ chữ */
+    }
+.row {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.left {
+    width: 100%;
+    min-height: auto;
+    padding: 10px;
+    margin-bottom: 10px;
   }
+
+.right {
+    margin-left: 0;
+    padding-left: 15px;
+    width: 100%;
+}
 }
