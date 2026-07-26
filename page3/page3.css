@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url("background.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow-y: auto;
+    padding-bottom: 300px;
+}
+.thanhchon {
+    color: #FFFFFF;
+    max-width: 95%;
+    margin: 60px auto;
+    font-family: "Poppins", sans-serif;
+    background: #fc0320;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.anhdaidien {
+    text-align: center;
+    margin: 20px auto 30px;
+    width: 100%;
+}
+.anhdaidien img {
+    margin-left: 0 auto;
+    margin-top: 1px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition:0.4s;
+}
+.anhdaidien img:hover {
+    transform:scale(1.05);
+}
+.lienhe {
+    color: black;
+    max-width: 600px;
+    max-height: 400px;
+    background: linear-gradient(to top right, #ffffff, #F5F5DC);
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 auto 20px;
+    text-align: center;
+    margin-right: auto;
+}
+.lienhe:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transform: translateY(-5px);
+}
+nav {
+    flex-wrap: wrap; /* tự động xuống dòng khi màn hình bị thu nhỏ lại khi mở bằng điện thoại */
+    display: flex;
+    background-color: #fc0320;
+    border-radius: 10px;
+}
+
+nav a {
+    border-right: #ffffff 1px solid;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    transform: translateY(-5px);
+    border-radius: 10px;
+}
+.trangtri img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.decor {
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  gap: 12px;             
+}
+
+.decor img {
+  width: 30px;          
+  height: 30px;         
+  border-radius: 50%;    
+}
+.tieude {
+    background: linear-gradient(to top right, #ffffff, #5aaaff);
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.menu-btn {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px 15px;
+}
+/*có tác dụng xuất hiện ba gạch bao gồm cả 3 cái nút trên thanh chọn khi mở bằng điện thoại*/
+@media (max-width:768px){
+.menu-btn{
+    display:block;
+}
+    /* chỉ ghi đè khi màn hình nhỏ */
+nav{
+    flex-direction:column;
+}
+nav a{
+    display:none;
+    width:100%;
+    text-align:center;
+    border-right:none;
+    border-top:1px solid white;
+}
+    nav.show a{
+        display:block;
+    }
+}
